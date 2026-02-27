@@ -23,23 +23,41 @@ Print the results L and U matrices or solution X matrix.
 ## Program:
 (i) To find the L and U matrix
 ```
-/*
+
 Program to find the L and U matrix.
 Developed by: Amal Tony Charles
 RegisterNumber: 25016419
-*/
+
+import numpy as np
+from scipy.linalg import lu
+matrix=eval(input())
+P,L,U=lu(matrix)
+print(L)
+print(U)
+
 ```
+
 (ii) To find the LU Decomposition of a matrix
-```
-/*
+``` 
+
 Program to find the LU Decomposition of a matrix.
 Developed by: 
 RegisterNumber: 
-*/
+
+# To print X matrix (solution to the equations)
+import numpy as np
+from scipy.linalg import lu_factor,lu_solve
+A = np.array(eval(input()))
+B = np.array(eval(input()))
+lu,piv = lu_factor(A)
+X = lu_solve((lu,piv),B)
+print(X)
+
 ```
 
 ## Output:
-![lu decomposition]()
+![part 1](image.png)
+![part 2](image-1.png)
 
 
 ## Result:
